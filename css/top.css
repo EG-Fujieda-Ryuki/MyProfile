@@ -1,0 +1,103 @@
+body {
+  background-image: url(../images/top.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+  
+.welcome {
+  background-image: url(../images/top_01.jpg);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  height: 500px;
+}
+   
+  
+.page-title {
+  font-size: 4rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align:  center;
+}
+
+.page {
+  text-align:  center; 
+} 
+  
+.card-container {
+  display:flex;
+  max-width: 400px;
+  height: 400px;
+  margin: 20px auto;
+}
+    
+.card-img img{
+  width:400px;
+  height:400px;
+}
+.card-text{
+  width:100%;
+  margin: 20px;
+}
+    
+  /*ページトップリンクの形状*/
+#page-top a{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background:#942D2F;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size:0.6rem;
+  transition:all 0.3s;
+}
+  
+#page-top a:hover{
+  background: #777;
+}
+  
+  /*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom:10px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateX(100px);
+}
+  
+  /*　左の動き　*/
+  
+#page-top.LeftMove {
+  animation: LeftAnime 0.5s forwards;
+}
+  
+@keyframes LeftAnime{
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+  
+  /*　footer　*/
+footer{
+  background-color:#fff;
+  align-items: center;
+  text-align:  center;
+  width: 100%;
+  height: 100px;
+}
